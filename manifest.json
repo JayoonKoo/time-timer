@@ -1,0 +1,7 @@
+{
+	"manifest_version": 2,
+	"name" : "time timer",
+	"version" : "1",
+	"default_locale": "ko",
+	"description" : "Timer to help you focus when working"
+}

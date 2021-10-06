@@ -1,0 +1,79 @@
+
+:root {
+	/* font */
+	--text-black: #333;
+	--text-white: #eee;
+	--big-font: 40px;
+	--middle-font: 20px;
+	--small-font: 15px;
+	--big-weight: 700;
+	--small-weight: 300;
+	
+	/* color */
+	--red: rgb(243, 32, 61);
+}
+
+.inner {
+	width: 800px;
+	height: 800px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/* header */
+.header {
+	margin: 50px;
+	margin-bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.header__title {
+	font-size: var(--big-font);
+	font-weight: var(--big-weight);
+	letter-spacing: 5px;
+	color: var(--text-black);
+}
+
+nav {
+	margin-top: 20px;
+}
+.header__menu {
+	display: flex;
+}
+.header__menu-item > button {
+	border: none;
+	font-size: 20px;
+	padding: 8px 20px;
+	cursor: pointer;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+	color: var(--text-color);
+	transition: all .3s;
+	border-radius: 5px;
+}
+.header__menu-item + .header__menu-item {
+	margin-left: 20px;
+}
+.header__menu-item > button:hover {
+	background-color: var(--red);
+	color: var(--text-white);
+}
+
+/* main */
+.main__timer {
+	width: 700px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+#main__timer-canvas {
+	width: 700px;
+}
+
+
+/* footer */
+.footer {
+	text-align: center;
+}
