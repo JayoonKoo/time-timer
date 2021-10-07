@@ -30,7 +30,7 @@ class Timer {
 
 const drayCtx = (color="rgb(243, 43, 61)") => {
 	ctx.fillStyle= color;
-	ctx.arc(50, 50, 20, 0, Math.PI * 2);
+	ctx.arc(350, 300, 300, 0, Math.PI * 2);
 	ctx.fill();
 }
 
