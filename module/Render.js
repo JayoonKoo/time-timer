@@ -10,7 +10,7 @@ const digitSec = document.querySelector('.main__timer-digit--sec');
 
 class Render {
 	constructor() {
-
+		this.drayCtx();
 	}
 
 	renderDigit = (time) => {
