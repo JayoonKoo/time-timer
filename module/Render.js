@@ -24,6 +24,14 @@ class Render {
 		ctx.arc(CENTER_X, CENTER_Y, DEFAULT_RADIUS, 0, Math.PI * 2);
 		ctx.fill();
 	}
+
+	toggleStartStop = (isStarting, eventTarget) => {
+		if (isStarting) {
+			eventTarget.textContent = 'Stop';
+		} else {
+			eventTarget.textContent = 'Start';
+		}
+	}
 }
 
 export default Render;
