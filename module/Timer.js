@@ -6,9 +6,9 @@ const DEFAULT_TIME_SEC = 3000;
 class Timer {
 	constructor(time=DEFAULT_TIME_SEC, startBtn) {
 		this._targetTime=time;
-		this._resetStartRadian = this.getStartRadian(this._targetTime);
-		this._render = new Render(this._resetStartRadian);
 		this._currentTime = this._targetTime;
+		this._resetStartRadian = this.getStartRadian(this._targetTime);
+		this._render = new Render(this._resetStartRadian, this.time);
 		this._min = Math.floor(time/60);
 		this._sec = time%60;
 		this._startId;
@@ -45,12 +45,16 @@ class Timer {
 			this.stop();
 		}
 		this._currentTime = this._targetTime;
-		this._render.renderDigit(this.time);
+		this._render.drayCtx(this.currentStartRadian);
+		this._render.drayDigit(this.time);
 	}
 
 	handelStart = (event) => {
 		if (!this.isStarting) {
-			this.start(() => this._render.drayCtx(this.currentStartRadian));
+			this.start(() => {
+				this._render.drayCtx(this.currentStartRadian)
+				this._render.drayDigit(this.time);
+			});
 		} else {
 			this.stop();
 		}
