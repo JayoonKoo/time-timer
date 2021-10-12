@@ -13,18 +13,22 @@
 	--red: rgb(243, 32, 61);
 }
 
+body {
+	height: 100vh;
+}
+
 .inner {
 	width: 800px;
-	height: 800px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	position: relative;
 }
 
 /* header */
 .header {
-	margin: 50px;
+	margin: 50px auto;
 	margin-bottom: 0;
 	display: flex;
 	flex-direction: column;
@@ -63,8 +67,13 @@ nav {
 
 /* main */
 .main__timer {
-	margin: 0 auto;
+	margin: 20px auto;
 	width: 700px;
+	padding: 20px;
+	border: 10px solid #777;
+	border-radius: 20px;
+	background-color: #eee;
+	box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
 }
 
 #main__timer-canvas {
@@ -74,5 +83,9 @@ nav {
 
 /* footer */
 .footer {
+	width: 800px;
+	position: fixed;
+	bottom: 0;
 	text-align: center;
+	margin: 20px 0;
 }
