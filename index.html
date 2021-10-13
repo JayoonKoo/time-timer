@@ -2,12 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+		<link rel="manifest" href="manifest.json" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Time Timer</title>
+		<link rel="shortcut icon" href="icon.png">
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="index.css" />
     <script type="module" src="index.js" defer></script>
+		<script type="module" defer>
+			import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+			const el = document.createElement('pwa-update');
+			document.body.appendChild(el);
+		</script>
   </head>
   <body>
     <div class="inner">

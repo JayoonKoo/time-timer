@@ -1,7 +1,18 @@
 {
-	"manifest_version": 2,
-	"name" : "time timer",
-	"version" : "1",
-	"default_locale": "ko",
-	"description" : "Timer to help you focus when working"
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "timer",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "timeTimer",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "images/300x300.png",
+      "type": "image/png",
+      "sizes": "300x300"
+    }
+  ]
 }
