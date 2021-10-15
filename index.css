@@ -16,6 +16,9 @@
 body {
 	height: 100vh;
 }
+.unshow {
+	display: none;
+}
 
 .inner {
 	width: 800px;
@@ -33,6 +36,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
+	width: 100%;
 }
 .header__title {
 	font-size: var(--big-font);
@@ -64,6 +69,22 @@ nav {
 	background-color: var(--red);
 	color: var(--text-white);
 }
+.header__default-time {
+	position: absolute;
+	right: 30px;
+	bottom: 10px;
+	font-size: var(--small-font);
+	font-weight: var(--small-weight);
+}
+
+
+/* modal */
+.modal {
+
+}
+
+
+
 
 /* main */
 .main__timer {

@@ -1,6 +1,12 @@
 import Render from './Render.js';
 
 const DEFAULT_TIME_SEC = 3000;
+const defaultTimeSpan = document.querySelector('.default-time'),
+	defaultTimeDiv = document.querySelector('.header__default-time'),
+	modal = document.querySelector('.modal'),
+	modalMinute =  document.querySelector('.modal__time-minute--min'),
+	modalSec = document.querySelector('.modal__time-sec--sec');
+
 
 
 class Timer {
@@ -11,6 +17,9 @@ class Timer {
 		this._render = new Render(this._resetStartRadian, this.time);
 		this._min = Math.floor(time/60);
 		this._sec = time%60;
+		this._defaultMin = String(this._min).padStart(2, "0");
+		this._defaultSec = String(this._sec).padStart(2, "0")
+		defaultTimeSpan.textContent = `${this._defaultMin} : ${this._defaultSec}`;
 		this._startId;
 		this._startBtn = startBtn;
 	}
@@ -59,6 +68,20 @@ class Timer {
 			this.stop();
 		}
 		this._render.toggleStartStop(this.isStarting, this._startBtn);
+	}
+
+	handleSetting = (event) => {
+		defaultTimeDiv.classList.toggle('unshow');
+		if (defaultTimeDiv.classList.contains('unshow')) {
+			// modal 창 보일 때
+			modal.classList.remove('unshow');
+			modalMinute.value = this._defaultMin;
+			modalSec.value = this._defaultSec;
+			
+		} else {
+			// modal 창 사라질 때 
+			modal.classList.add('unshow');
+		}
 	}
 
 	start = (renderDigit) => {
