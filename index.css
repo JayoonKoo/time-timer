@@ -58,7 +58,7 @@ nav {
 	padding: 8px 20px;
 	cursor: pointer;
 	box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-	color: var(--text-color);
+	color: var(--text-black);
 	transition: all .3s;
 	border-radius: 5px;
 }
@@ -81,6 +81,21 @@ nav {
 /* modal */
 .modal {
 
+}
+.modal__time button{
+	border: none;
+	background-color: #eee;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+.modal__time-increase-btn {
+	background: url('assets/up.svg') no-repeat;
+	background-position: center center;
+}
+.modal__time-decrease-btn {
+	background: url('assets/down.svg') no-repeat;
+	background-position: center center;
 }
 
 
