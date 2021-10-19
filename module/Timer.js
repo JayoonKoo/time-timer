@@ -54,6 +54,12 @@ class Timer {
 		const {target: {value}} = event;
 		const numValue = Number(value);
 		const {target: {dataset: {type}}} = event;
+
+		if (isNaN(numValue)) {
+			alert("숫자를 입력해야 합니다.");
+			event.target.value = "0";
+			return;
+		}
 		switch (type) {
 			case "min":
 				if (numValue >= 60) {
@@ -64,6 +70,7 @@ class Timer {
 						alert("0보다 작은 값은 입력할 수 없습니다.");
 						event.target.value = "0";
 					} 
+					event.target.value = String(numValue);
 				}		
 				break;
 
@@ -76,6 +83,7 @@ class Timer {
 						alert("0보다 작은 값은 입력할 수 없습니다.");
 						event.target.value = "0";
 					} 
+					event.target.value = String(numValue);
 				}		
 				break;
 		
