@@ -50,6 +50,40 @@ class Timer {
 		return typeof this._startId !== 'undefined';
 	}
 
+	handleChnage = (event) => {
+		const {target: {value}} = event;
+		const numValue = Number(value);
+		const {target: {dataset: {type}}} = event;
+		switch (type) {
+			case "min":
+				if (numValue >= 60) {
+					alert("60분 보다 작은 값을 입력해야 합니다.");
+					event.target.value = "59";
+				} else {
+					if (numValue < 0) {
+						alert("0보다 작은 값은 입력할 수 없습니다.");
+						event.target.value = "0";
+					} 
+				}		
+				break;
+
+			case "sec":
+				if (numValue > 60) {
+					alert("60분 보다 이하의 값을 입력해야 합니다.");
+					event.target.value = "60";
+				} else {
+					if (numValue < 0) {
+						alert("0보다 작은 값은 입력할 수 없습니다.");
+						event.target.value = "0";
+					} 
+				}		
+				break;
+		
+			default:
+				break;
+		}
+	}
+
 
 	handleMin = (event) => {
 		const {target} = event;
