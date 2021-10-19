@@ -7,7 +7,10 @@ const resetBtn =  document.querySelector(".header__menu-item--reset-btn"),
 	modalDivMin = document.querySelector('.modal__time-minute'),
 	modalDivSec = document.querySelector('.modal__time-sec'),
 	// modal Button
-	modalButtons = document.querySelector('.modal__button');
+	modalButtons = document.querySelector('.modal__button'),
+	// modal Input 
+	minInput = document.querySelector(".modal__time-minute--min"),
+	secInput = document.querySelector(".modal__time-sec--sec");
 
 
 
@@ -21,3 +24,5 @@ modalDivMin.addEventListener('click', timer.handleMin);
 modalDivSec.addEventListener('click', timer.handleSec);
 modalButtons.addEventListener('click', timer.handleModalBtn);
 
+minInput.addEventListener('input', timer.handleChnage);
+secInput.addEventListener('input', timer.handleChnage);
