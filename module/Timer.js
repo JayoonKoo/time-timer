@@ -162,7 +162,7 @@ class Timer {
 	start = (renderDigit) => {
 		this._startId = setInterval(() => {
 			this._currentTime -= 1;
-			if (this._currentTime < 0) clearInterval(this._startId);
+			if (this._currentTime <= 0) clearInterval(this._startId);
 
 			const time = this.time;
 			renderDigit(time);
