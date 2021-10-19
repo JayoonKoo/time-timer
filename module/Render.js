@@ -34,6 +34,13 @@ class Render {
   };
 
   drayCtx = (startRadian = this._startRadian) => {
+		if (startRadian === 0) {
+			startRadian = 2;
+		} else {
+			if (startRadian === 2) {
+				startRadian = 0;
+			}
+		}
     this._centerX = CANVAS_W / 2;
     this._centerY = CANVAS_H / 2;
     ctx.fillStyle = DEFAULT_COLOR;
