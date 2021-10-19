@@ -29,9 +29,33 @@
             <li class="header__menu-item">
               <button class="header__menu-item--start-btn">Start</button>
             </li>
+            <li class="header__menu-item">
+              <button class="header__menu-item--setting-btn">Setting</button>
+            </li>
           </ul>
         </nav>
+				<div class="header__default-time">default Time is <span class="default-time"></span></div>
       </header>
+
+			<!-- modal -->
+			<div class="modal unshow">
+				<div class="modal__time">
+					<div class="modal__time-minute">
+						<button class="modal__time-increase-btn" data-action="increase"></button>
+						<input type="text" class="modal__time-minute--min" data-type="min">
+						<button class="modal__time-decrease-btn" data-action="decrease"></button>
+					</div>
+					<div class="modal__time-sec">
+						<button class="modal__time-increase-btn" data-action="increase"></button>
+						<input type="text" class="modal__time-sec--sec" data-type="sec">
+						<button class="modal__time-decrease-btn" data-action="decrease"></button>
+					</div>
+				</div>
+				<div class="modal__button">
+					<button class="modal__button--cancle" data-action="cancle">취소</button>
+					<button class="modal__button--confirm" data-action="submit">확인</button>
+				</div>
+			</div>
 
 			<!-- main -->
       <main class="main">
